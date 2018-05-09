@@ -17,6 +17,11 @@ render() {
   return (
     <Rack
       rackData = {this.state.rackData}
+      onDropButtonClick = {
+        (columnIndex) => {
+          game.makeMove({this.state.rackData}, columnIndex);
+        }
+      }
     />
   )
 }

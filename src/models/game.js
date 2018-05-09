@@ -6,6 +6,21 @@ class Game {
     }
     return rackData;
   }
+
+  makeMove(rackData, columnIndex) {
+    //check move is legal, does someone
+
+    return newRackData;
+  }
+
+  checkForWinner() {
+
+  }
+
+  checkRackIsFull() {
+
+  }
+
 }
 
 export default Game;

@@ -18,7 +18,7 @@ const Rack = ({rackData}) => {
     return (
       <div className="column" key={columnIndex}>
         {mapSlots(column)}
-        <DropButton />
+        <DropButton columnData={column} key={columnIndex}/>
       </div>
     )
   });
