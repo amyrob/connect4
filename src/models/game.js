@@ -8,9 +8,17 @@ class Game {
   }
 
   makeMove(rackData, columnIndex) {
-    //check move is legal, does someone
-    console.log(columnIndex);
-    // return newRackData;
+    // copy rack data
+    const newRackData = Array(7);
+    rackData.forEach((column, index) => {
+      newRackData[index] = [...rackData[index]];
+    });
+
+    //check move is legal
+
+    newRackData[columnIndex][0] = 1;
+
+    return newRackData;
   }
 
   checkForWinner() {

@@ -11,21 +11,24 @@ class GameContainer extends Component {
       rackData: game.resetRack(),
       currentPlayer: 1
     };
+
+    this.play = this.play.bind(this);
   }
 
-render() {
-  return (
-    <Rack
-      rackData = {this.state.rackData}
-      onDropButtonClick ={game.makeMove}
-      // onDropButtonClick={game.makeMove}
-    />
-  )
-}
+  play(rackData, columnIndex) {
+    const newRackData = game.makeMove(rackData, columnIndex);
+    this.setState({rackData: newRackData});
+  }
 
-
-
-
+  render() {
+    return (
+      <Rack
+        rackData = {this.state.rackData}
+        onDropButtonClick = {this.play}
+        // onDropButtonClick={game.makeMove}
+      />
+    )
+  }
 };
 
 
