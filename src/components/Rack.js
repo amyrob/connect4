@@ -13,12 +13,15 @@ const mapSlots = function(column) {
   });
 }
 
-const Rack = ({rackData}) => {
+const Rack = ({rackData, onDropButtonClick}) => {
   const columns = rackData.map((column, columnIndex) => {
     return (
       <div className="column" key={columnIndex}>
         {mapSlots(column)}
-        <DropButton columnData={column} key={columnIndex}/>
+        <DropButton
+          key={columnIndex}
+          onClick={() => onDropButtonClick(rackData, columnIndex)}
+        />
       </div>
     )
   });

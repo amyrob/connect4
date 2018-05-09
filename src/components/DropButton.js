@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-const DropButton = ({columnData, key}) => {
+const DropButton = ({onClick}) => {
   return (
-    <div className="drop-button"></div>
+    <div className="drop-button" onClick={onClick}></div>
   )
 }
 

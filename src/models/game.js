@@ -9,8 +9,8 @@ class Game {
 
   makeMove(rackData, columnIndex) {
     //check move is legal, does someone
-
-    return newRackData;
+    console.log(columnIndex);
+    // return newRackData;
   }
 
   checkForWinner() {
