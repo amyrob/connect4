@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import Slot from './Slot.js';
 
 const mapSlots = function(column) {
   return column.map((playerToken, rowIndex) => {
     return (
-      <p className="row" key={rowIndex} playerToken={playerToken}>bob</p>
+      <Slot
+        key={rowIndex}
+        playerToken={playerToken}    
+      />
     )
   });
 }
@@ -12,9 +16,7 @@ const Rack = ({rackData}) => {
   const columns = rackData.map((column, columnIndex) => {
     return (
       <div className="column" key={columnIndex}>
-        {
-          mapSlots(column)
-        }
+        {mapSlots(column)}
       </div>
     )
   });
