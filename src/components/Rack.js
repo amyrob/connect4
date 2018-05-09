@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import Slot from './Slot.js';
+import DropButton from './DropButton.js';
 
 const mapSlots = function(column) {
   return column.map((playerToken, rowIndex) => {
     return (
       <Slot
         key={rowIndex}
-        playerToken={playerToken}    
+        playerToken={playerToken}
       />
     )
   });
@@ -17,6 +18,7 @@ const Rack = ({rackData}) => {
     return (
       <div className="column" key={columnIndex}>
         {mapSlots(column)}
+        <DropButton />
       </div>
     )
   });

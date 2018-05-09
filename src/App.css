@@ -1,6 +1,7 @@
 .slot-container {
   height: 80px;
   width: 80px;
+  background-color: blue;
 }
 
 .rack {
@@ -11,5 +12,16 @@
 }
 
 .column {
-  background-color: blue;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.drop-button {
+  border: solid gray;
+  width: 20px;
+  height: 20px;
+  border-width: 0 10px 10px 0;
+  margin: 20px;
+  transform: rotate(45deg);
 }
