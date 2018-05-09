@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Game from '../models/game.js';
+import Rack from '../components/Rack.js'
 
 const game = new Game();
 
@@ -14,7 +15,9 @@ class GameContainer extends Component {
 
 render() {
   return (
-    <p> BOB </p>
+    <Rack
+      rackData = {this.state.rackData}
+    />
   )
 }
 
